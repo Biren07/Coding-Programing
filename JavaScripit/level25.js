@@ -53,24 +53,41 @@ console.log(EnglishMarks);
 
 // 10 Questions Using filter()
 // Use filter() to get only the students who are older than 21.
-
+ const age21=students.filter((student)=>student.age>21);
+ console.log(age21);
 // Use filter() to get the students who scored more than 80 in Math.
-
+const getMath=students.filter((student)=> student.marks.Math>80)
+console.log(getMath);
 // Use filter() to get the students who have total marks greater than 250.
+const total=students.filter((student)=>student.marks.Math+student.marks.Science+student.marks.English>250)
+console.log(total);
 
 // Use filter() to find students from Mumbai and Delhi only.
+const from=students.filter((student)=>student.place==="Mumbai"||student.place==="Delhi");
+console.log(form);
 
 // Use filter() to get students who failed in English (less than 40 marks).
+const lessEnglish=students.filter((student)=>student.marks.English<40);
+console.log(lessEnglish);
 
 // Use filter() to get students who have an even id.
+const evenID=students.filter((student)=>student.id%2===0);
+console.log(evenID);
 
 // Use filter() to find students whose names start with the letter "A".
+const Aname=students.filter((student)=>student.name.startsWith("A"));
+console.log(Aname);
 
 // Use filter() to get students who have a perfect score (100) in any subject.
-
+const perfect=students.filter((student)=>student.marks.Math===100||student.marks.Science===100||student.marks.English===100);
+console.log(perfect);
 // Use filter() to find students who scored below 75 in at least one subject.
+const below75=students.filter((student)=>student.marks.Math<75||student.marks.Science<75||student.marks.English<75);
+console.log(below75);
 
 // Use filter() to find students whose total marks are between 200 and 250.
+const between=students.filter((student)=>student.marks.Math+student.marks.Science+student.marks.English>200&&student.marks.Math+student.marks.Science+student.marks.English<250);
+console.log(between);
 
 // 10 Questions Using reduce()
 // Use reduce() to calculate the total marks of all students combined.
